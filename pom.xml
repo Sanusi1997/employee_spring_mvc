@@ -9,6 +9,7 @@
 	<name>Employee parent</name>
 	<modules>
 		<module>employee_data</module>
+		<module>employee_service</module>
 	</modules>
 
 	<dependencies>
@@ -45,8 +46,16 @@
 			<version>3.15.0</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>3.3.0</version>
+    <scope>test</scope>
+</dependency>
 
-
+		
 
 
 
