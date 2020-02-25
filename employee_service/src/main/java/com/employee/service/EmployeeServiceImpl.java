@@ -3,6 +3,7 @@ package com.employee.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.employee.dao.EmployeeDao;
 import com.employee.dao.EmployeeDaoImpl;
 import com.employee.entity.Employee;
 
@@ -10,7 +11,7 @@ import com.employee.entity.Employee;
 public class EmployeeServiceImpl implements EmployeeService {
 
 	@Autowired
-	private EmployeeDaoImpl employeeDaoImpl;
+	private EmployeeDao employeeDaoImpl;
 	
 	public void saveEmployee(Employee newEmployee) {
 		// TODO Auto-generated method stub
