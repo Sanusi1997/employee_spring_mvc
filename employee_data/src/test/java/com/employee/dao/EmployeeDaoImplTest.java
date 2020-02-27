@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -30,6 +31,7 @@ import com.employee.entity.Employee;
 @ContextConfiguration("classpath:data-context.xml")
 @RunWith(SpringRunner.class)
 public class EmployeeDaoImplTest {
+	
 	@Autowired
 	private Environment env;
 	
@@ -76,6 +78,18 @@ public class EmployeeDaoImplTest {
 		assertThat(savedEmployee.getEmployeeId()).isEqualTo(4);
 		
 		System.out.println(savedEmployee);
+	}
+	@Test
+	public void getAllEmployeesTest() {
+		
+		assertThat(employeeDaoImpl).isNotNull();		
+		
+		List <Employee> allEmployees = employeeDaoImpl.findAll();
+		
+		assertThat(allEmployees).isNotNull();
+		assertThat(allEmployees).hasSize(5);
+		
+		allEmployees.forEach(System.out::println);
 	}
 	
 }
